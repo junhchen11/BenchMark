@@ -9,7 +9,7 @@ export default class DropDown extends React.Component {
 	state = { lift: null };
 	render() {
 		return (
-			<View>
+			<View style={{ zIndex: 10 }}>
 				<DropDownPicker
 					items={[
 						{ label: 'Bench', value: 'Bench' },
@@ -18,46 +18,38 @@ export default class DropDown extends React.Component {
 					]}
 					placeholder="Lift"
 					style={pickerStyles.style}
-					itemStyle={pickerStyles.itemStyle}
 					dropDownStyle={pickerStyles.dropDownStyle}
-					containerStyle={pickerStyles.containerStyle}
-					activeItemStyle={pickerStyles.activeItemStyles}
+					itemStyle={pickerStyles.itemStyle}
+					activeItemStyle={pickerStyles.activeItemStyle}
 					labelStyle={pickerStyles.labelStyle}
 					arrowSize={15}
+					containerStyle={pickerStyles.containerStyle}
 					onChangeItem={(item) => this.setState({ lift: item.value })}
 				></DropDownPicker>
 			</View>
 		);
 	}
 }
+
 const pickerStyles = StyleSheet.create({
 	style: {
-		borderWidth: 2,
-		borderBottomColor: '#000',
-		borderTopColor: 'transparent',
-		borderRightColor: 'transparent',
-		borderLeftColor: 'transparent',
-		borderBottomLeftRadius: 0,
-		borderBottomRightRadius: 0,
-		borderBottomWidth: 2,
+		borderWidth: 0,
+		borderColor: 'transparent',
 	},
 	itemStyle: {
 		justifyContent: 'flex-start',
-		paddingLeft: '4%',
 	},
 	dropDownStyle: {
-		elevation: 0,
 		borderColor: 'transparent',
+		backgroundColor: '#FFF',
 	},
 	containerStyle: {
-		height: '22%',
-		width: 150,
-	},
-	activeItemStyle: {
-		justifyContent: 'flex-start',
+		height: 40,
+		width: '65%',
 	},
 	labelStyle: {
 		fontWeight: 'bold',
-		fontSize: 20,
+		fontSize: 22,
+		margin: 0,
 	},
 });
