@@ -4,6 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { styles } from './Styles';
 
 import LiftCard from './Containers/LiftCard';
+import MaxTrendGraph from './Components/MaxTrendGraph';
 liftStats = {
 	sets: '3',
 	reps: '8',
@@ -15,7 +16,7 @@ liftStats = {
 export default function App() {
 	return (
 		<View style={styles.Container}>
-			<LiftCard liftStats={liftStats} editable={true} />
+			<MaxTrendGraph></MaxTrendGraph>
 		</View>
 	);
 }
