@@ -4,7 +4,6 @@ import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { LineChart } from 'react-native-chart-kit';
 const graphWidth = Dimensions.get('window').width * 0.9;
 const graphHeight = Dimensions.get('window').height * 0.25;
-
 const data = {
 	labels: [
 		'11/10',
@@ -31,7 +30,8 @@ const chartConfig = {
 	propsForLabels: {
 		strokeWidth: '1',
 		stroke: 'white',
-		fontSize: '8',
+		fontSize: '9',
+		fontWeight: '200',
 	},
 };
 export default class MaxTrendGraph extends React.Component {
@@ -70,9 +70,9 @@ const MaxTrendGraphStyle = StyleSheet.create({
 	textStyle: {
 		backgroundColor: 'black',
 		color: 'white',
-		fontSize: 36,
+		fontSize: 40,
 		fontWeight: 'bold',
 		margin: 10,
-		paddingLeft: 11,
+		paddingLeft: 9,
 	},
 });

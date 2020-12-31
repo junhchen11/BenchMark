@@ -1,10 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import ProgressRing from './Components/ProgressRing';
 import { styles } from './Styles';
 
-import LiftCard from './Containers/LiftCard';
-import MaxTrendGraph from './Components/MaxTrendGraph';
 liftStats = {
 	sets: '3',
 	reps: '8',
@@ -16,7 +15,7 @@ liftStats = {
 export default function App() {
 	return (
 		<View style={styles.Container}>
-			<MaxTrendGraph></MaxTrendGraph>
+			<ProgressRing></ProgressRing>
 		</View>
 	);
 }
