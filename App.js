@@ -1,7 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import MaxTrendGraph from './Components/MaxTrendGraph';
 import ProgressRing from './Components/ProgressRing';
+import RPEDayGraph from './Components/RPEDayGraph';
+import RPEgraph from './Components/RPEgraph';
+import LiftCard from './Containers/LiftCard';
+import ScrollableGraphs from './Containers/ScrollableGraphs';
+import SwiperComponent from './Containers/ScrollableGraphs';
 import { styles } from './Styles';
 
 liftStats = {
@@ -15,7 +21,9 @@ liftStats = {
 export default function App() {
 	return (
 		<View style={styles.Container}>
-			<ProgressRing></ProgressRing>
+			<LiftCard liftStats={liftStats} editable={true}></LiftCard>
+			<LiftCard liftStats={liftStats}></LiftCard>
+			<ScrollableGraphs></ScrollableGraphs>
 		</View>
 	);
 }

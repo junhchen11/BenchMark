@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, StyleSheet, View, Dimensions } from 'react-native';
 import { ProgressChart } from 'react-native-chart-kit';
-const ringWidth = Dimensions.get('window').width * 0.9;
+const ringWidth = Dimensions.get('window').width * 0.91;
 const ringData = {
 	labels: ['Swim', 'Bike', 'Run'], // optional
 	data: [0.8, 0.9, 0.9],

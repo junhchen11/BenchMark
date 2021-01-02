@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState, Component } from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { LineChart } from 'react-native-chart-kit';
-const graphWidth = Dimensions.get('window').width * 0.9;
+const graphWidth = Dimensions.get('window').width * 0.91;
 const graphHeight = Dimensions.get('window').height * 0.25;
 const data = {
 	labels: [
@@ -62,10 +62,6 @@ const MaxTrendGraphStyle = StyleSheet.create({
 	viewStyle: {
 		backgroundColor: 'black',
 		borderRadius: 16,
-		shadowColor: '#000',
-		shadowOpacity: 0.2,
-		shadowRadius: 24,
-		shadowOffset: { height: 8 },
 	},
 	textStyle: {
 		backgroundColor: 'black',
