@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Text, View, StyleSheet, TextInput } from 'react-native';
 import DropDown from '../Components/DropDown';
 import NumberInput from '../Components/NumberInput';
-import SubmitIcon from '../Components/SubmitFormIcon';
+import SubmitIcon from '../Components/SubmitIcon';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { styles } from '../Styles';
 

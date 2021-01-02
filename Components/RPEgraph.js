@@ -22,6 +22,9 @@ const chartConfig = {
 	},
 };
 export default class RPEgraph extends Component {
+	constructor(props) {
+		super(props);
+	}
 	render() {
 		return (
 			<View style={RPEchartstyles.viewStyle}>
