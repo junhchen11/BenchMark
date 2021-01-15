@@ -6,24 +6,13 @@ export default class GoalCard extends Component {
 	render() {
 		return (
 			<View style={GoalCardStyles.ViewStyle}>
-				<View style={GoalCardStyles.GoalCardStyle}>
-					<Text style={GoalCardStyles.GoalTextStyle}> Goals </Text>
-					<Text style={GoalCardStyles.GoalValueStyle}> 315 </Text>
-					<SubmitIcon></SubmitIcon>
-				</View>
-				<View style={GoalCardStyles.NoteCardStyle}>
-					<Text> Notes</Text>
-					<TextInput>
-						"“Lorem ipsum dolor sit amet, consecteturorem ipsum
-						dolor sit amet, consectetuorem ipsum dolor sit amet,
-						consectetuorem ipsum dolor sit amet, consectetuorem
-						ipsum dolor sit amet, consectetuorem ipsum dolor sit
-						amet, consectetuorem ipsum dolor sit amet,
-						consectetuorem ipsum dolor sit amet, consectetuorem
-						ipsum dolor sit amet, consectetuorem ipsum dolor sit
-						amet, consectetu"
-					</TextInput>
-					<SubmitIcon></SubmitIcon>
+				<Text style={GoalCardStyles.GoalTextStyle}>Goals</Text>
+
+				<View style={GoalCardStyles.BottomHalf}>
+					<Text style={GoalCardStyles.GoalValueStyle}>315</Text>
+					<View style={{ justifyContent: 'flex-end' }}>
+						<SubmitIcon></SubmitIcon>
+					</View>
 				</View>
 			</View>
 		);
@@ -32,33 +21,29 @@ export default class GoalCard extends Component {
 
 const GoalCardStyles = StyleSheet.create({
 	ViewStyle: {
-		display: 'flex',
+		height: '20%',
+		width: '50%',
+		padding: 15,
+		backgroundColor: 'white',
+		justifyContent: 'space-evenly',
+		borderRadius: 12,
+		shadowColor: '#000',
+		shadowOpacity: 0.1,
+		shadowRadius: 24,
+		shadowOffset: { height: 8 },
+	},
+
+	BottomHalf: {
+		height: '66%',
+		width: '100%',
 		flexDirection: 'row',
 		justifyContent: 'space-between',
-		width: '91.66666%',
-		height: 220,
-	},
-	GoalCardStyle: {
-		display: 'flex',
-		flexDirection: 'column',
-		flex: 1.5,
-		padding: 17.5,
-		//backgroundColor: 'cyan',
 	},
 	GoalTextStyle: {
-		flex: 1.3,
-		//backgroundColor: 'black',
-		fontSize: 24,
-		//color: 'white',
+		fontSize: 32,
 	},
 	GoalValueStyle: {
-		flex: 2,
-		//backgroundColor: 'white',
+		fontWeight: 'bold',
 		fontSize: 64,
-	},
-	NoteCardStyle: {
-		flex: 1,
-		padding: 17.5,
-		//backgroundColor: 'pink',
 	},
 });
